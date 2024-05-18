@@ -1,0 +1,272 @@
+[
+    {
+        "id": 1,
+        "nombre": "Adidas Ultraboost",
+        "marca": "Adidas",
+        "stock": 20,
+        "precio": 99.99,
+        "descripcion": "Zapatillas deportivas Adidas Ultraboost",
+        "imagen": "https://www.opensports.com.ar/media/catalog/product/cache/4769e4d9f3516e60f2b4303f8e5014a8/H/Q/HQ6353_0.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Adidas NMD R1",
+        "marca": "Adidas",
+        "stock": 18,
+        "precio": 129.99,
+        "descripcion": "Zapatillas deportivas Adidas NMD R1",
+        "imagen": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/0e03e7a2a9cb44dfac2bad6a00f95888_9366/Zapatillas_NMD_R1_Blanco_GZ9261_01_standard.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Adidas Superstar",
+        "marca": "Adidas",
+        "stock": 10,
+        "precio": 79.99,
+        "descripcion": "Zapatillas deportivas Adidas Superstar",
+        "imagen": "https://assets.adidas.com/images/w_600,f_auto,q_auto/e85a8a6600634af58ca0af1d8262b80b_9366/Zapatillas_Superstar_XLG_Negro_ID4656_01_standard.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Adidas Stan Smith",
+        "marca": "Adidas",
+        "stock": 6,
+        "precio": 109.99,
+        "descripcion": "Zapatillas deportivas Adidas Stan Smith",
+        "imagen": "https://assets.adidas.com/images/w_600,f_auto,q_auto/eb350b7a7152499dbc1eaf5b0136edb3_9366/Zapatillas_Stan_Smith_Blanco_HQ6813_01_standard.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "Adidas Continental 80",
+        "marca": "Adidas",
+        "stock": 14,
+        "precio": 69.99,
+        "descripcion": "Zapatillas deportivas Adidas Continental 80",
+        "imagen": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/c6f0aede76f849a18a27a91500a0c8c9_9366/Zapatillas_Continental_80_Negro_G27707_01_standard.jpg"
+    },
+    {
+        "id": 6,
+        "nombre": "Nike Air Max 270",
+        "marca": "Nike",
+        "stock": 10,
+        "precio": 120.99,
+        "descripcion": "Zapatillas deportivas Nike Air Max 270",
+        "imagen": "https://nikearprod.vtexassets.com/arquivos/ids/844991-800-800?width=800&height=800&aspect=true"
+    },
+    {
+        "id": 7,
+        "nombre": "Nike React Infinity",
+        "marca": "Nike",
+        "stock": 8,
+        "precio": 89.99,
+        "descripcion": "Zapatillas deportivas Nike React Infinity Run Flyknit",
+        "imagen": "https://nikearprod.vtexassets.com/arquivos/ids/491721-800-800?width=800&height=800&aspect=true"
+    },
+    {
+        "id": 8,
+        "nombre": "Nike Air Zoom",
+        "marca": "Nike",
+        "stock": 15,
+        "precio": 149.99,
+        "descripcion": "Zapatillas deportivas Nike Air Zoom Pegasus 38",
+        "imagen": "https://nikearprod.vtexassets.com/arquivos/ids/698461/DH4072_001_A_PREM.jpg?v=638229587866770000"
+    },
+    {
+        "id": 9,
+        "nombre": "Nike Air Force 1",
+        "marca": "Nike",
+        "stock": 12,
+        "precio": 109.99,
+        "descripcion": "Zapatillas deportivas Nike Air Force 1",
+        "imagen": "https://nikearprod.vtexassets.com/arquivos/ids/699311-800-800?width=800&height=800&aspect=true"
+    },
+    {
+        "id": 10,
+        "nombre": "Nike Blazer Mid '77",
+        "marca": "Nike",
+        "stock": 5,
+        "precio": 79.99,
+        "descripcion": "Zapatillas deportivas Nike Blazer Mid '77 Vintage",
+        "imagen": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/8ce97c97-3cb9-4e7f-86f4-6f39eef4b2b2/tenis-blazer-mid-77-q5gmbj.png"
+    },
+    {
+        "id": 11,
+        "nombre": "Reebok Classic Leather",
+        "marca": "Reebok",
+        "stock": 15,
+        "precio": 79.99,
+        "descripcion": "Zapatillas deportivas Reebok Classic Leather",
+        "imagen": "https://reebokarg.vtexassets.com/arquivos/ids/216687-800-800?v=638448293426900000&width=800&height=800&aspect=true"
+    },
+    {
+        "id": 12,
+        "nombre": "Reebok Nano X1",
+        "marca": "Reebok",
+        "stock": 7,
+        "precio": 99.99,
+        "descripcion": "Zapatillas deportivas Reebok Nano X1",
+        "imagen": "https://reebokarg.vtexassets.com/arquivos/ids/160224/Imagen-1.jpg?v=638005366034200000"
+    },
+    {
+        "id": 13,
+        "nombre": "Reebok Zig Kinetica II",
+        "marca": "Reebok",
+        "stock": 10,
+        "precio": 89.99,
+        "descripcion": "Zapatillas deportivas Reebok Zig Kinetica II",
+        "imagen": "https://reebokarg.vtexassets.com/arquivos/ids/178293/Imagen-1.jpg?v=638265553923570000"
+    },
+    {
+        "id": 14,
+        "nombre": "Reebok Floatride Energy 3.0",
+        "marca": "Reebok",
+        "stock": 9,
+        "precio": 129.99,
+        "descripcion": "Zapatillas deportivas Reebok Floatride Energy 3.0",
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsCf7wuPXqHwwjKwqfkv3-4oG3w8bjAPFYjWp8A7uJoCB_vXtxNVLmSvzoX5v1e9bAIo0&usqp=CAU"
+    },
+    {
+        "id": 15,
+        "nombre": "Reebok Classic Nylon",
+        "marca": "Reebok",
+        "stock": 13,
+        "precio": 109.99,
+        "descripcion": "Zapatillas deportivas Reebok Classic Nylon",
+        "imagen": "https://reebokarg.vtexassets.com/arquivos/ids/184649/Imagen-1.jpg?v=638205787992730000"
+    },
+    {
+        "id": 16,
+        "nombre": "Puma Suede Classic XXI",
+        "marca": "Puma",
+        "stock": 18,
+        "precio": 69.99,
+        "descripcion": "Zapatillas deportivas Puma Suede Classic XXI",
+        "imagen": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_480,h_480/global/388981/04/sv03/fnd/ARG/fmt/png"
+    },
+    {
+        "id": 17,
+        "nombre": "Puma Future Rider Twofold",
+        "marca": "Puma",
+        "stock": 9,
+        "precio": 89.99,
+        "descripcion": "Zapatillas deportivas Puma Future Rider Twofold",
+        "imagen": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/380591/06/sv01/fnd/PNA/fmt/png/Tenis-Future-Rider-Twofold"
+    },
+    {
+        "id": 18,
+        "nombre": "Puma RS-Fast Cyber",
+        "marca": "Puma",
+        "stock": 11,
+        "precio": 99.99,
+        "descripcion": "Zapatillas deportivas Puma RS-Fast Cyber",
+        "imagen": "https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dw1e358626/products/PU_368783-02/PU_368783-02-1.JPG"
+    },
+    {
+        "id": 19,
+        "nombre": "New Balance Cali Sport",
+        "marca": "New Balance",
+        "stock": 14,
+        "precio": 79.99,
+        "descripcion": "Zapatillas deportivas New Balance Cali Sport",
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVI9V6elLp9UamoBikIq9oebQ-VmQu5EeOAA&usqp=CAU"
+    },
+    {
+        "id": 20,
+        "nombre": "New Balance Future Rider",
+        "marca": "New Balance",
+        "stock": 16,
+        "precio": 119.99,
+        "descripcion": "Zapatillas deportivas New Balance Future Rider Twofold",
+        "imagen": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_706,h_706/global/394801/05/sv03/fnd/ARG/fmt/png"
+    },
+    {
+        "id": 21,
+        "nombre": "New Balance 574",
+        "marca": "New Balance",
+        "stock": 10,
+        "precio": 99.99,
+        "descripcion": "Zapatillas deportivas New Balance 574",
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXkG2UH8jQEGvVeXnwDISv1KnPT4vDDBcZlA&usqp=CAU"
+    },
+    {
+        "id": 22,
+        "nombre": "New Balance Fresh Foam",
+        "marca": "New Balance",
+        "stock": 6,
+        "precio": 79.99,
+        "descripcion": "Zapatillas deportivas New Balance Fresh Foam 1080v11",
+        "imagen": "https://www.newbalance.com.ar/on/demandware.static/-/Sites-siteCatalog_NBEU/default/dwf866e6bf/new_images/N10225075/N10225075070101/N10225075070101-1.jpeg"
+    },
+    {
+        "id": 23,
+        "nombre": "New Balance Fresh Foam X",
+        "marca": "New Balance",
+        "stock": 8,
+        "precio": 89.99,
+        "descripcion": "Zapatillas deportivas New Balance Fresh Foam X 1080v11",
+        "imagen": "https://www.newbalance.com.ar/on/demandware.static/-/Sites-siteCatalog_NBEU/default/dw701fc8ff/new_images/N10225078/N10225078070100/N10225078070100-1.jpeg"
+    },
+    {
+        "id": 24,
+        "nombre": "Asics Gel-Kayano 28",
+        "marca": "Asics",
+        "stock": 7,
+        "precio": 79.99,
+        "descripcion": "Zapatillas deportivas Asics Gel-Kayano 28",
+        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyODIBk2eu_Bv5rJZxMsnK5fTEO5tHNaVBcw&usqp=CAU"
+    },
+    {
+        "id": 25,
+        "nombre": "Asics Gel-Nimbus 23",
+        "marca": "Asics",
+        "stock": 12,
+        "precio": 89.99,
+        "descripcion": "Zapatillas deportivas Asics Gel-Nimbus 23",
+        "imagen": "https://s3.sa-east-1.amazonaws.com/www.vaypol.com.ar/variants/e6jg708p3rtu3xiaoeqmbqq1nimr/c77c2a06864ac9aca38dc5bd9371de015471edcdbf322dfb14411689bf968ae5"
+    },
+     {
+        "id": 26,
+        "nombre": "Converse Chuck Taylor",
+        "marca": "Converse",
+        "stock": 18,
+        "precio": 59.99,
+        "descripcion": "Zapatillas deportivas Converse Chuck Taylor All Star",
+        "imagen": "https://www.opensports.com.ar/media/catalog/product/cache/4769e4d9f3516e60f2b4303f8e5014a8/1/6/166582C_0_8.jpg"
+    },
+    {
+        "id": 27,
+        "nombre": "Converse Chuck 70",
+        "marca": "Converse",
+        "stock": 14,
+        "precio": 69.99,
+        "descripcion": "Zapatillas deportivas Converse Chuck 70",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_795095-MLA74881677986_032024-O.webp"
+    },
+    {
+        "id": 28,
+        "nombre": "Converse Chuck Taylor CX",
+        "marca": "Converse",
+        "stock": 20,
+        "precio": 79.99,
+        "descripcion": "Zapatillas deportivas Converse Chuck Taylor All Star CX",
+        "imagen": "https://i.pinimg.com/736x/6a/14/ef/6a14ef39858e6a414b12502a93a2dd6f.jpg"
+    },
+    {
+        "id": 29,
+        "nombre": "Vans Old Skool",
+        "marca": "Vans",
+        "stock": 16,
+        "precio": 69.99,
+        "descripcion": "Zapatillas deportivas Vans Old Skool",
+        "imagen": "https://www.tripstore.com.ar/media/catalog/product/cache/4769e4d9f3516e60f2b4303f8e5014a8/0/D/0D3HY28_0_15.jpg"
+    },
+    {
+        "id": 30,
+        "nombre": "Vans Sk8-Hi",
+        "marca": "Vans",
+        "stock": 20,
+        "precio": 79.99,
+        "descripcion": "Zapatillas deportivas Vans Sk8-Hi",
+        "imagen": "https://cdn-images.farfetch-contents.com/12/07/09/47/12070947_12741715_600.jpg"
+    }
+]

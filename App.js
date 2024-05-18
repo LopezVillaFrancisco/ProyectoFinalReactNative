@@ -1,12 +1,34 @@
-import { Text, View } from 'react-native'
-import React, { Component } from 'react'
+import React from 'react';
+import { StyleSheet, Platform, StatusBar, SafeAreaView, View } from 'react-native';
+import TopBar from './src/components/TopBar';
+import Navigatior from './src/Navigation/navigatior'; 
+import { Provider } from 'react-redux';
+import Store from './src/Store'; 
+import Counter from './src/components/Counter';
 
-export default class App extends Component {
-  render() {
-    return (
-      <View>
-        <Text>App</Text>
-      </View>
-    )
-  }
-}
+
+const App = () => {  
+  
+  return (
+    <SafeAreaView style={styles.container}> 
+      <Provider store={Store}> 
+      {/* <Counter/> */}
+        <TopBar/>
+        <Navigatior/>
+      </Provider>
+    </SafeAreaView>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    marginTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    backgroundColor: 'black',
+  },
+  content: {
+    flex: 1,
+  },
+});
+
+export default App;

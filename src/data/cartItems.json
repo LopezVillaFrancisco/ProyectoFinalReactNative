@@ -1,0 +1,22 @@
+[
+    {
+    "id": 1,
+    "nombre": "Adidas Ultraboost",
+    "marca": "Adidas",
+    "stock": 20,
+    "precio": 99.99,
+    "descripcion": "Zapatillas deportivas Adidas Ultraboost",
+    "imagen": "https://www.opensports.com.ar/media/catalog/product/cache/4769e4d9f3516e60f2b4303f8e5014a8/H/Q/HQ6353_0.jpg",
+    "quantity": 2
+    },
+    {
+        "id": 2,
+        "nombre": "Adidas NMD R1",
+        "marca": "Adidas",
+        "stock": 18,
+        "precio": 129.99,
+        "descripcion": "Zapatillas deportivas Adidas NMD R1",
+        "imagen": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/0e03e7a2a9cb44dfac2bad6a00f95888_9366/Zapatillas_NMD_R1_Blanco_GZ9261_01_standard.jpg",
+        "quantity": 2
+    }
+]

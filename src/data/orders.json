@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "fecha": "2024-05-17",
+      "items": [
+        {
+          "id": 1,
+          "nombre": "Adidas Ultraboost",
+          "precio": 99.99,
+          "quantity": 2
+        },
+        {
+          "id": 2,
+          "nombre": "Adidas NMD R1",
+          "precio": 129.99,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "fecha": "2024-05-16",
+      "items": [
+        {
+          "id": 3,
+          "nombre": "Nike Air Max",
+          "precio": 119.99,
+          "quantity": 1
+        }
+      ]
+    }
+  ]
+  
