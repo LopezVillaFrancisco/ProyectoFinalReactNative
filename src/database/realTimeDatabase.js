@@ -1,0 +1,1 @@
+export const urlDb = 'https://proyectofinal-reactnativ-40cc6-default-rtdb.firebaseio.com/'

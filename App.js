@@ -3,16 +3,14 @@ import { StyleSheet, Platform, StatusBar, SafeAreaView, View } from 'react-nativ
 import TopBar from './src/components/TopBar';
 import Navigatior from './src/Navigation/navigatior'; 
 import { Provider } from 'react-redux';
-import Store from './src/Store'; 
-import Counter from './src/components/Counter';
+import store from './src/Store'; 
 
 
 const App = () => {  
   
   return (
     <SafeAreaView style={styles.container}> 
-      <Provider store={Store}> 
-      {/* <Counter/> */}
+      <Provider store={store}> 
         <TopBar/>
         <Navigatior/>
       </Provider>

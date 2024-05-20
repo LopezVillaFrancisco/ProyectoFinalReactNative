@@ -1,16 +1,28 @@
-import { Image, Pressable, StyleSheet, Text, View } from 'react-native';
-import React, { useEffect, useState } from 'react';
-import zapatillas from '../data/zapatillas.json'; 
-
+import { Image, Pressable, StyleSheet, Text, View, ActivityIndicator} from 'react-native';
+import React from 'react';
+import { useGetZapatillasByIdQuery } from '../services/shopService';
+import Counter from '../components/Counter'
 const ZapatillaDetail = ({ route}) => { 
   const {id} = route.params  
-  const [zapatilla, setZapatilla] = useState(null);
-
-  useEffect(() => {
-    const zapatillaSeleccionada = zapatillas.find((zapatilla) => zapatilla.id == id); 
-    setZapatilla(zapatillaSeleccionada); 
-  }, [id]);
+  const {data:zapatilla,error,isLoading} = useGetZapatillasByIdQuery(id)
   
+  if (isLoading) {
+    return (
+      <View style={styles.loadingContainer}>
+        <ActivityIndicator size="large" color="blue" />
+        <Text>Cargando...</Text>
+      </View>
+    );
+  }
+
+  if (error) {
+    return (
+      <View style={styles.errorContainer}>
+        <Text>Error: {error.message}</Text>
+      </View>
+    );
+  }
+
   return (
     <View style={styles.container} >
       {zapatilla ? (
@@ -26,8 +38,9 @@ const ZapatillaDetail = ({ route}) => {
             <Text style={styles.precio}>${zapatilla.precio}</Text> 
             <Pressable style={styles.button}>
               <Text style={styles.buttonText}>Agregar al carrito</Text>
-            </Pressable>
-          </View>
+            </Pressable> 
+          </View>  
+          <Counter/>
         </View>
       ) : null}
     </View>
@@ -82,5 +95,15 @@ const styles = StyleSheet.create({
     color: 'black',
     fontSize: 18,
     fontWeight: 'bold',
+  }, 
+  loadingContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
+  errorContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  }, 
 });
