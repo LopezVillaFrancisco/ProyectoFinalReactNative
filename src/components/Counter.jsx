@@ -1,12 +1,11 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Touchable } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import { increment, decrement } from '../Features/Counter/counterSlice';
 
 const Counter = () => {
   const count = useSelector((state) => state.counter.value);
-  const dispatch = useDispatch(); 
-  Touchable
+  const dispatch = useDispatch();
 
   return (
     <View style={styles.container}>

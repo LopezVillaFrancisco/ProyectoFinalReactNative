@@ -1,11 +1,18 @@
 import { Image, Pressable, StyleSheet, Text, View, ActivityIndicator} from 'react-native';
 import React from 'react';
 import { useGetZapatillasByIdQuery } from '../services/shopService';
-import Counter from '../components/Counter'
+import { useDispatch } from 'react-redux';
+import { addCartItem } from '../Features/Cart/cartSlice';
 const ZapatillaDetail = ({ route}) => { 
   const {id} = route.params  
-  const {data:zapatilla,error,isLoading} = useGetZapatillasByIdQuery(id)
+  const {data:zapatilla,error,isLoading} = useGetZapatillasByIdQuery(id) 
+  const dispatch = useDispatch()
   
+  const handleAddCart = () => {
+     dispatch(addCartItem({...zapatilla,quantity:1}))
+  }
+
+
   if (isLoading) {
     return (
       <View style={styles.loadingContainer}>
@@ -37,10 +44,9 @@ const ZapatillaDetail = ({ route}) => {
             <Text style={styles.descripcion}>{zapatilla.descripcion}</Text>
             <Text style={styles.precio}>${zapatilla.precio}</Text> 
             <Pressable style={styles.button}>
-              <Text style={styles.buttonText}>Agregar al carrito</Text>
+              <Text style={styles.buttonText} onPress={handleAddCart} >Agregar al carrito</Text>
             </Pressable> 
           </View>  
-          <Counter/>
         </View>
       ) : null}
     </View>
