@@ -25,7 +25,7 @@ const InputForm = ({
                 secureTextEntry={isSecure} 
                 placeholder={placeholder}
             />
-            {error ? <Text style={styles.error}>{error}</Text> : null}
+        {error ? <Text style={styles.error}>{error}</Text> : null} 
         </View>
     );
 }

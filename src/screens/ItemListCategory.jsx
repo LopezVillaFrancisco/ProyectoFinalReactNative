@@ -55,12 +55,10 @@ export default ItemListCategory;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     width: '100%',
     height: '100%',
     padding: 20,
-    backgroundColor: 'black',
   },
   loadingContainer: {
     flex: 1,

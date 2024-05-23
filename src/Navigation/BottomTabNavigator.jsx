@@ -2,12 +2,14 @@ import { StyleSheet, View } from 'react-native';
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeStackNavigator from './HomeStackNavigator';
-import { Entypo } from '@expo/vector-icons';
+import { Entypo } from '@expo/vector-icons'; 
 import { FontAwesome5 } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
 
 import Header from '../components/Header';
 import CartStackNavigator from './CartStackNavigator';
 import OrderStackNavigator from './OrderStackNavigator';
+import MyProfileStackNavigator from './MyProfileStackNavigator';
 
 
 const BottomTab = createBottomTabNavigator();
@@ -51,6 +53,17 @@ const BottomTabNavigator = () => {
           tabBarIcon: ({ focused }) => (
             <View style={[styles.iconContainer, focused && styles.iconContainerFocused]}>
               <FontAwesome5 name="receipt" size={24} color={focused ? 'black' : 'grey'} />
+            </View>
+          ),
+        }}
+      />
+      <BottomTab.Screen
+        name="Perfil"
+        component={MyProfileStackNavigator}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <View style={[styles.iconContainer, focused && styles.iconContainerFocused]}>
+              <FontAwesome name="user" size={24} color={focused ? 'black' : 'grey'} />
             </View>
           ),
         }}

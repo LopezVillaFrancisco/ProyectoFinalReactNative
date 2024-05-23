@@ -3,7 +3,8 @@ import { urlDb } from '../database/realTimeDatabase';
 
 export const shopApi = createApi({
   reducerPath: 'shopApi',
-  baseQuery: fetchBaseQuery({ baseUrl: urlDb }),
+  baseQuery: fetchBaseQuery({ baseUrl: urlDb }), 
+  tagTypes: ["profileImageGet"],
   endpoints: (builder) => ({
     getMarcas: builder.query({
       query: () => 'marcas.json',
@@ -29,9 +30,30 @@ export const shopApi = createApi({
           url:'orders.json', 
           method:'POST',
           body: order
+      }),  
+    }),
+      getProfileImage: builder.query ({
+        query: (localId) => `profileImages/${localId}.json`, 
+        providesTags:["profileImageGet"]
+      }), 
+      postProfileImage: builder.mutation({
+        query: ({image,localId}) => ({
+          url:`profileImages/${localId}.json`, 
+          method: 'PUT',
+          body: {
+            image
+          }
+        }), 
+        invalidatesTags: ["profileImageGet"]
       })
     })
-  }),
-});
+  })
 
-export const { useGetMarcasQuery, useGetZapatillasByMarcaQuery,useGetZapatillasByIdQuery, usePostOrderMutation } = shopApi;
+export const { 
+  useGetMarcasQuery, 
+  useGetZapatillasByMarcaQuery,
+  useGetZapatillasByIdQuery,
+  usePostOrderMutation, 
+  usePostProfileImageMutation,  
+  useGetProfileImageQuery
+} = shopApi;
