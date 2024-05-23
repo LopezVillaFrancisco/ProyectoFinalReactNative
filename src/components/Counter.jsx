@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Pres, Pressable } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import { increment, decrement } from '../Features/Counter/counterSlice';
 
@@ -9,13 +9,13 @@ const Counter = () => {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.button} onPress={() => dispatch(decrement())}>
+      <Pressable style={styles.button} onPress={() => dispatch(decrement())}>
         <Text style={styles.buttonText}>-</Text>
-      </TouchableOpacity>
+      </Pressable>
       <Text style={styles.count}>{count}</Text>
-      <TouchableOpacity style={styles.button} onPress={() => dispatch(increment())}>
+      <Pressable style={styles.button} onPress={() => dispatch(increment())}>
         <Text style={styles.buttonText}>+</Text>
-      </TouchableOpacity>
+      </Pressable>
     </View>
   );
 };

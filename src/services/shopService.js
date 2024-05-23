@@ -20,12 +20,18 @@ export const shopApi = createApi({
       transformResponse: (response) =>{
         const newResponse = Object.values(response) 
         if(newResponse.length)return newResponse[0] 
-        return newResponse
+        return null
         
       }
-    }),
+    }), 
+    postOrder: builder.mutation({
+      query: ({...order}) =>({
+          url:'orders.json', 
+          method:'POST',
+          body: order
+      })
+    })
   }),
 });
 
-export const {
-  useGetMarcasQuery, useGetZapatillasByMarcaQuery,useGetZapatillasByIdQuery} = shopApi;
+export const { useGetMarcasQuery, useGetZapatillasByMarcaQuery,useGetZapatillasByIdQuery, usePostOrderMutation } = shopApi;
