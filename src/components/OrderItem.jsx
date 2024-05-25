@@ -2,10 +2,11 @@ import React from 'react';
 import { View, Text, StyleSheet, Pressable } from 'react-native';
 import { Octicons } from '@expo/vector-icons';
 
-const OrderItem = ({ item, onPress, totalPrice }) => {
+const OrderItem = ({ item, onPress, totalPrice }) => { 
   return (
     <Pressable style={styles.card} onPress={onPress}>
       <View style={styles.detalle}>
+        <Text style={styles.fecha}>Fecha: {item.createdAt}</Text>
         <Text style={styles.id}>Orden ID: {item.id}</Text>
         <Text style={styles.totalPrice}>Precio Total: ${totalPrice}</Text> 
       </View>
@@ -29,7 +30,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   fecha: {
-    fontSize: 18,
+    fontSize: 17,
     fontWeight: 'bold',
   },
   id: {

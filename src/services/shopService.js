@@ -29,11 +29,12 @@ export const shopApi = createApi({
       query: ({ total, items, user }) => {
         const id = uuid.v4();  
         return {
-          url: `orders/${id}.json`, 
-          method: 'PUT',
-          body: { id, total, items, user },  
-        };}, 
-        invalidatesTags: ['getOrders']
+          url: `orders.json`, 
+          method: 'POST',
+          body: { id, total, items, user, createdAt: new Date().toLocaleString() },  
+        };
+      }, 
+      invalidatesTags: ['getOrders']
     }),
     getProfileImage: builder.query ({
       query: (localId) => `profileImages/${localId}.json`, 
