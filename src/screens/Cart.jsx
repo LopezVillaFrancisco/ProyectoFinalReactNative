@@ -1,17 +1,37 @@
 import { View, Text, FlatList, StyleSheet, Pressable } from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
 import CartItem from '../components/CartItem';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { usePostOrderMutation } from '../services/shopService';
+import AwesomeAlert from 'react-native-awesome-alerts';
+import { clearCart } from '../Features/Cart/cartSlice';
 
 const Cart = () => {
   const { items: CartData, total } = useSelector(state => state.cart.value);
+  const { localId } = useSelector(state => state.auth.value);
   const [triggerPostOrder, resuelt] = usePostOrderMutation();
+  const [showAlert, setShowAlert] = useState(false);
+  const [showSuccessAlert, setShowSuccessAlert] = useState(false);
+  const dispatch = useDispatch();
 
   const handleConfirmOrder = () => {
-    triggerPostOrder({ total, items: CartData, user: 'loggedUser' });
+    setShowAlert(true);
   };
 
+  const handleConfirmOrderAlert = () => {
+    triggerPostOrder({ total, items: CartData, user: localId });
+    dispatch(clearCart());
+    setShowAlert(false);
+    setShowSuccessAlert(true);
+  };
+
+  const handleCancelOrderAlert = () => {
+    setShowAlert(false);
+  };
+
+  const handleSuccessAlertDismiss = () => {
+    setShowSuccessAlert(false);
+  };
 
   return (
     <View style={styles.container}>
@@ -32,6 +52,37 @@ const Cart = () => {
           </Pressable>
         </>
       )}
+      <AwesomeAlert
+        show={showAlert}
+        showProgress={false}
+        title="Confirmar pedido"
+        message="¿Estás seguro de que quieres confirmar esta orden?"
+        closeOnTouchOutside={true}
+        closeOnHardwareBackPress={false}
+        showConfirmButton={true}
+        showCancelButton={true}
+        confirmText="Sí"
+        cancelText="No"
+        confirmButtonColor="green"
+        cancelButtonColor="red"
+        onConfirmPressed={handleConfirmOrderAlert}
+        onCancelPressed={handleCancelOrderAlert}
+        contentContainerStyle={styles.alertContainer}
+        confirmButtonStyle={styles.confirmButton}
+        cancelButtonStyle={styles.cancelButton}
+      />
+      <AwesomeAlert
+        show={showSuccessAlert}
+        showProgress={false}
+        title="Éxito"
+        message="Tu orden ha sido confirmada."
+        closeOnTouchOutside={true}
+        closeOnHardwareBackPress={false}
+        showConfirmButton={true}
+        confirmText="OK"
+        confirmButtonColor="green"
+        onConfirmPressed={handleSuccessAlertDismiss}
+      />
     </View>
   );
 };
@@ -63,6 +114,20 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginTop: 20, 
     textAlign: 'center'
+  },
+  alertContainer: {
+    width: '80%',
+    alignItems: 'center',
+  },
+  confirmButton: {
+    backgroundColor: 'green', 
+    width: '30%', 
+    alignItems: 'center',
+  },
+  cancelButton: {
+    backgroundColor: 'red', 
+    width: '30%', 
+    alignItems: 'center',
   },
 });
 

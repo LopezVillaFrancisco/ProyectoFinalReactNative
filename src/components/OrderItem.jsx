@@ -6,11 +6,10 @@ const OrderItem = ({ item, onPress, totalPrice }) => {
   return (
     <Pressable style={styles.card} onPress={onPress}>
       <View style={styles.detalle}>
-        <Text style={styles.fecha}>Fecha: {item.fecha}</Text>
         <Text style={styles.id}>Orden ID: {item.id}</Text>
         <Text style={styles.totalPrice}>Precio Total: ${totalPrice}</Text> 
       </View>
-      <Pressable style={styles.iconButton}>
+      <Pressable style={styles.iconButton} onPress={onPress}>
         <Octicons name="info" size={24} color="black" />
       </Pressable>
     </Pressable>

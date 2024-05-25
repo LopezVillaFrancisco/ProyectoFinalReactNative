@@ -7,7 +7,7 @@ import store from './src/Store';
 import { init } from './src/db';
 
 (async () => {
-    const response = await init()  
+  await init()  
 })()
 
 
