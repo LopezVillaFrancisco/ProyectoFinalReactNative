@@ -7,6 +7,7 @@ import { useLoginMutation } from '../services/authService';
 import { setUser } from '../Features/User/userSlice';
 import { useDispatch } from 'react-redux';
 import { logInSchema } from '../validations/authSchema';
+import { insertSession } from '../db';
 
 const LoginScreen = () => {
   const [email, setEmail] = useState("");
@@ -19,17 +20,28 @@ const LoginScreen = () => {
 
   const [triggerLogIn,result] = useLoginMutation() 
   
-  useEffect(() => {
-    if(result.isSuccess){ 
-      dispatch(
-        setUser({
-          email: result.data.email,
-          idToken:result.data.idToken,
-          localId: result.data.localId
+  useEffect(() => { 
+    if (result.isSuccess) { 
+        insertSession({
+            email: result.data.email,
+            localId: result.data.localId,
+            token: result.data.idToken,
         })
-      )
+            .then((response) => { 
+              console.log(response)
+                dispatch(
+                    setUser({
+                        email: result.data.email,
+                        idToken: result.data.idToken,
+                        localId: result.data.localId,
+                    })
+                )
+            })
+            .catch((err) => {
+                console.log(err)
+            })
     }
-  },[result])
+}, [result])
   
   const onSubmit = () => {
     try{ 

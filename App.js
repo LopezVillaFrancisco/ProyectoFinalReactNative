@@ -4,6 +4,20 @@ import TopBar from './src/components/TopBar';
 import Navigatior from './src/Navigation/navigatior'; 
 import { Provider } from 'react-redux';
 import store from './src/Store'; 
+import { init } from './src/db';
+
+(async () => {
+  try {
+    const response = await init()  
+    console.log('response',response)
+    console.log('DB corriendo')
+    
+  } catch (err ) {
+    console.log('error al correr la DB') 
+    console.log(err.message)
+  }
+    
+})()
 
 
 const App = () => {  
