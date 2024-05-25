@@ -19,27 +19,20 @@ const LoginScreen = () => {
   const dispatch = useDispatch();
 
   const [triggerLogIn,result] = useLoginMutation() 
-  
-  useEffect(() => { 
-    if (result.isSuccess) { 
+  useEffect(() => {
+    if (result.isSuccess) {
         insertSession({
             email: result.data.email,
             localId: result.data.localId,
             token: result.data.idToken,
         })
-            .then((response) => { 
-              console.log(response)
-                dispatch(
-                    setUser({
-                        email: result.data.email,
-                        idToken: result.data.idToken,
-                        localId: result.data.localId,
-                    })
-                )
-            })
-            .catch((err) => {
-                console.log(err)
-            })
+        dispatch(
+          setUser({
+            email: result.data.email,
+            idToken: result.data.idToken,
+            localId: result.data.localId,
+        })
+            )
     }
 }, [result])
   

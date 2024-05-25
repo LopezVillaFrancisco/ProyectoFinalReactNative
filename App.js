@@ -7,16 +7,7 @@ import store from './src/Store';
 import { init } from './src/db';
 
 (async () => {
-  try {
     const response = await init()  
-    console.log('response',response)
-    console.log('DB corriendo')
-    
-  } catch (err ) {
-    console.log('error al correr la DB') 
-    console.log(err.message)
-  }
-    
 })()
 
 

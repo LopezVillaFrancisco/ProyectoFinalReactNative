@@ -1,33 +1,28 @@
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeStackNavigator from './HomeStackNavigator';
-import { Entypo } from '@expo/vector-icons'; 
-import { FontAwesome5 } from '@expo/vector-icons';
-import { FontAwesome } from '@expo/vector-icons';
-
-import Header from '../components/Header';
+import { Entypo, FontAwesome5, FontAwesome } from '@expo/vector-icons';
 import CartStackNavigator from './CartStackNavigator';
 import OrderStackNavigator from './OrderStackNavigator';
 import MyProfileStackNavigator from './MyProfileStackNavigator';
 
-
 const BottomTab = createBottomTabNavigator();
+
 const BottomTabNavigator = () => {
   return (
     <BottomTab.Navigator
-      screenOptions={({ route,navigation }) => ({
-        header: () => {
-          return <Header title={route.name} navigation={navigation} />;
-        },
+      screenOptions={({ route }) => ({
         tabBarShowLabel: false,
         tabBarStyle: styles.tabBar,
+        headerTitleAlign: 'center', 
       })}
     >
       <BottomTab.Screen
-        name="Shop"
+        name="Shop" 
         component={HomeStackNavigator}
         options={{
+          headerTitle: "Shop",
           tabBarIcon: ({ focused }) => (
             <View style={[styles.iconContainer, focused && styles.iconContainerFocused]}>
               <Entypo name="shop" size={24} color={focused ? 'black' : 'grey'} />
@@ -39,6 +34,7 @@ const BottomTabNavigator = () => {
         name="Cart"
         component={CartStackNavigator}
         options={{
+          headerTitle: "Cart",
           tabBarIcon: ({ focused }) => (
             <View style={[styles.iconContainer, focused && styles.iconContainerFocused]}>
               <Entypo name="shopping-cart" size={24} color={focused ? 'black' : 'grey'} />
@@ -50,6 +46,7 @@ const BottomTabNavigator = () => {
         name="Order"
         component={OrderStackNavigator}
         options={{
+          headerTitle: "Order",
           tabBarIcon: ({ focused }) => (
             <View style={[styles.iconContainer, focused && styles.iconContainerFocused]}>
               <FontAwesome5 name="receipt" size={24} color={focused ? 'black' : 'grey'} />
@@ -61,6 +58,7 @@ const BottomTabNavigator = () => {
         name="Perfil"
         component={MyProfileStackNavigator}
         options={{
+          headerTitle: "Perfil",
           tabBarIcon: ({ focused }) => (
             <View style={[styles.iconContainer, focused && styles.iconContainerFocused]}>
               <FontAwesome name="user" size={24} color={focused ? 'black' : 'grey'} />

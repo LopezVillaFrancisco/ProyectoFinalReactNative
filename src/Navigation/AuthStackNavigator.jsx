@@ -1,6 +1,5 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Header from '../components/Header';
 import SignupScreen from '../screens/SignupScreen';
 import LoginScreen from '../screens/LoginScreen';
 
@@ -11,7 +10,7 @@ const AuthStackNavigator = () => {
     <Stack.Navigator
       initialRouteName='Signup'  
       screenOptions={{
-        header: ({ route }) => <Header title={"Bienvenido"} />
+        headerTitleAlign: 'center', 
       }}
     >
       <Stack.Screen name='Login' component={LoginScreen} />

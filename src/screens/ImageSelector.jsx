@@ -23,7 +23,6 @@ const ImageSelector = () => {
     }
 
     const pickImage = async () => { 
-        try {
             const cameraOk = await verificarPermisos(); 
         if (cameraOk){
             let result = await ImagePicker.launchCameraAsync({
@@ -37,20 +36,13 @@ const ImageSelector = () => {
                 setImage(`data:image/jpeg;base64,${result.assets[0].base64}`)
             }
         }
-        } catch (error) {   
-            console.log(error);
-        }
         
     }
 
     const confirmImage = () => { 
-        try {
         dispatch(setCameraImage(image))
         triggerPostImage({image,localId})
         navigation.goBack();
-        } catch (error) {
-            console.log(error)
-        }
     }
 
     return (

@@ -5,6 +5,7 @@ import SubmitButton from '../components/SubmitButton';
 import { useDispatch, useSelector } from 'react-redux'; 
 import { useGetProfileImageQuery } from '../services/shopService';
 import { clearUser } from '../Features/User/userSlice';
+import { truncateSessionsTable } from '../db';
 
 const MyProfile = () => {
     const navigation = useNavigation(); 
@@ -19,9 +20,11 @@ const MyProfile = () => {
         navigation.navigate('Image selector');
     };
     
-    const handleSignOut = async () => {
-        dispatch(clearUser());
-    }; 
+    const handleSignOut = async () => {   
+            const response = await truncateSessionsTable()
+            dispatch(clearUser())
+        
+    }
 
 
     return (
